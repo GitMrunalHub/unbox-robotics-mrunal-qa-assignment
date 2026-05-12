@@ -33,15 +33,12 @@ public class SearchPage {
 
         compare.get(9).click();
         compare.get(10).click();
-
-        return phones.get(9).getText();
+        Assert.assertTrue(driver.findElement(By.xpath("//span[text()='COMPARE']/../../div/span[2]")).getText(), 2);
     }
 
     public void click10thPhone() {
 
-        List<WebElement> phones =
-            driver.findElements(products);
-
+        List<WebElement> phones = driver.findElements(products);
         phones.get(9).click();
     }
 }
