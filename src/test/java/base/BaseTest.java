@@ -1,26 +1,21 @@
 package base;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
-
-import java.time.Duration;
+import utils.DriverFactory;
 
 public class BaseTest {
 
-    public WebDriver driver;
-
+    @Parameters("browser")
     @BeforeMethod
-    public void setup() {
+    public void setup(String browser) {
 
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://www.flipkart.com");
+        DriverFactory.initDriver(browser);
+        DriverFactory.getDriver().get("https://www.flipkart.com");
     }
 
     @AfterMethod
     public void teardown() {
-        driver.quit();
+
+        DriverFactory.quitDriver();
     }
 }
