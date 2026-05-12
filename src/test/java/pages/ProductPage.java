@@ -11,16 +11,11 @@ public class ProductPage {
         this.driver = driver;
     }
 
-    By addToCart =
-        By.xpath("//button[contains(text(),'Add to cart')]");
+    By addToCart = By.xpath("//button[contains(text(),'Add to cart')]");
 
     public void addProductToCart() {
 
         driver.findElement(addToCart).click();
-
-        Assert.assertTrue(
-            driver.getPageSource()
-                  .contains("Go to Cart")
-        );
+        Assert.assertTrue(driver.getPageSource().contains("Go to Cart"));
     }
 }
