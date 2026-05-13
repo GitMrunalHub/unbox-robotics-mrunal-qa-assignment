@@ -1,20 +1,45 @@
-Objective
+# Flipkart Automation Framework
 
-Automate the following flow using Selenium + Java + TestNG:
-Open Flipkart
-Close login popup
-Search for "mobile"
-Verify search result text
-Add 10th and 11th phones to compare tray
-Open 10th phone
-Add product to cart
-Increase quantity
-Remove item from cart
-Verify empty cart message
+## 📌 Project Overview
 
-Tech Stack
-Java
-Selenium WebDriver
-TestNG
-Maven
-Page Object Model (POM)
+This project automates the Flipkart e-commerce flow using:
+
+- Selenium WebDriver
+- Java
+- TestNG
+- Maven
+- Page Object Model (POM)
+
+The framework is designed with reusable components, modular structure, and OOPS principles for better scalability and maintainability.
+
+---
+
+# 🚀 Automated Test Scenario
+
+The following flow is automated:
+
+- Open Flipkart website
+- Close login popup
+- Search for "mobile"
+- Verify search results message
+- Select 10th and 11th mobile phones for comparison
+- Verify compare tray
+- Open 10th mobile product page
+- Add product to cart
+- Verify "Go to Cart" button
+- Increase product quantity
+- Verify quantity update message
+- Remove product from cart
+- Verify empty cart screen message
+
+---
+
+# 🛠️ Tech Stack
+
+| Technology | Usage |
+|---|---|
+| Java | Programming Language |
+| Selenium WebDriver | UI Automation |
+| TestNG | Test Execution |
+| Maven | Build Management |
+| POM | Framework Design Pattern |
